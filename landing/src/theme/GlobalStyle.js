@@ -16,7 +16,16 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${({ theme }) => theme.color.background.secondary};
         color: ${({ theme }) => theme.color.text.primary};
         font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
         
+    }
+
+    h1 {
+        font-weight: 500;
+    }
+
+    h3 {
+        font-weight: 500;
     }
 `
 

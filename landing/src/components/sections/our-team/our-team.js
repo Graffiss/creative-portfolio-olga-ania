@@ -1,7 +1,7 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../../../components/layout"
-import MemeImg from "../../../images/meme.png"
 
 const Background = styled.div`
   background-color: #24327c;
@@ -39,6 +39,19 @@ const Paragraph = styled.p`
 `
 
 const OurTeam = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(name: { eq: "meme" }) {
+        childImageSharp {
+          fluid(maxWidth: 558, quality: 100) {
+            src
+            srcSet
+            sizes
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <Background />
@@ -55,7 +68,11 @@ const OurTeam = () => {
           potrafimy zrobić coś z niczego. Zrobić kampanię w digitalu, mając do
           dyspozycji tylko packshot produktu? Challange accepted!
         </Paragraph>
-        <Meme src={MemeImg} />
+        <Meme
+          src={data.file.childImageSharp.fluid.src}
+          srcSet={data.file.childImageSharp.fluid.srcSet}
+          sizes={data.file.childImageSharp.fluid.sizes}
+        />
       </Wrapper>
     </Layout>
   )

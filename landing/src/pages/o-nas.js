@@ -1,16 +1,20 @@
 import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import OurTeam from "../components/sections/our-team/our-team"
-import Ania from "../components/sections/Ania/ania"
-import Olga from "../components/sections/Olga/olga"
-import AniaPortfolio from "../components/sections/Ania-portfolio/ania-portfolio"
-import AniaSocial from "../components/sections/Ania-social/ania-social"
-import OlgaPortfolio from "../components/sections/Olga-portfolio/olga-portfolio"
-import Maybelline1 from "../components/sections/Olga-portfolio/maybelline1"
-import Maybelline2 from "../components/sections/Olga-portfolio/maybelline2"
-import Loreal from "../components/sections/Olga-portfolio/loreal"
-import ZgodnieZNatura from "../components/sections/Olga-portfolio/zgodnie-z-natura"
+import OurTeam from "../components/sections/o-nas/our-team/our-team"
+import Ania from "../components/sections/o-nas/Ania/ania"
+import Olga from "../components/sections/o-nas/Olga/olga"
+import AniaPortfolio from "../components/sections/o-nas/Ania-portfolio/ania-portfolio"
+import AniaSocial from "../components/sections/o-nas/Ania-social/ania-social"
+import OlgaPortfolio from "../components/sections/o-nas/Olga-portfolio/olga-portfolio"
+import Maybelline1 from "../components/sections/o-nas/Olga-portfolio/maybelline1"
+import Maybelline2 from "../components/sections/o-nas/Olga-portfolio/maybelline2"
+import Loreal from "../components/sections/o-nas/Olga-portfolio/loreal"
+import ZgodnieZNatura from "../components/sections/o-nas/Olga-portfolio/zgodnie-z-natura"
+import Laser from "../components/sections/o-nas/Olga-portfolio/laser"
+import RichContent from "../components/sections/o-nas/Olga-portfolio/rich-conent"
+import Steps from "../components/sections/o-nas/Olga-portfolio/steps"
+import DajSobieSpokoj from "../components/sections/o-nas/Olga-portfolio/daj-sobie-spokoj"
 
 const CenterWrapper = styled.div`
   height: 100vh;
@@ -51,6 +55,10 @@ const About = () => (
     <Maybelline2 />
     <Loreal />
     <ZgodnieZNatura />
+    <Laser />
+    <RichContent />
+    <Steps />
+    <DajSobieSpokoj />
   </>
 )
 

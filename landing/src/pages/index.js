@@ -6,24 +6,51 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Header1 = styled.h1`
-  padding: 25px 0;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  font-size: 40px;
-  line-height: 48px;
-  width: 30vw;
-  margin: 20px 10px;
+  font-size: 64px;
+  text-align: center;
+  font-weight: 700;
+
+  span {
+    font-family: "Tinos";
+    font-size: 100px;
+    font-weight: 300;
+    font-style: italic;
+  }
+`
+const Wrapper = styled.div`
+  display: flex;
 `
 
-const LinkSection = styled.div`
-  border-top: 1px solid black;
-  padding-top: 25px;
-  margin-top: 20px;
-  width: 30vw;
+const IntroSection = styled.div`
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ${({ theme }) => theme.color.text.primary};
+  color: ${({ theme }) => theme.color.text.secondary};
+  padding: 30px 0;
 
-  a {
-    text-decoration: none;
+  p {
+    font-size: 15px;
+    font-weight: 300;
+
+    span {
+      border-left: 1px solid ${({ theme }) => theme.color.text.secondary};
+      border-right: 1px solid ${({ theme }) => theme.color.text.secondary};
+      padding: 0 10px;
+    }
   }
+`
+const LinkSection = styled.div`
+  flex: 1;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
 `
 
 const Span = styled.span`
@@ -31,58 +58,43 @@ const Span = styled.span`
   border-right: 1px solid black;
   padding-right: 10px;
 `
-const MainContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const ImageWrapper = styled.img`
-  max-height: 50vh;
-`
 
 const Links = styled(Link)`
   font-size: 40px;
-  padding-left: 20px;
+  padding-bottom: 20px;
   color: inherit;
 `
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Header1>Here we are</Header1>
-    <MainContent>
-      <ImageWrapper
-        src={data.file.childImageSharp.fluid.src}
-        srcSet={data.file.childImageSharp.fluid.srcSet}
-        sizes={data.file.childImageSharp.fluid.sizes}
-      />
-      <h2>Rozwiazania kreatywne to nasza pasja.</h2>
+    <Wrapper>
+      <IntroSection>
+        <p>
+          Najbardziej zgrany team w tej branży! Praca to nasza przyjemność, brak
+          budżetu to nie przeszkoda, a kreatywne rozwiązania to nasz chlep
+          powszedni.
+        </p>
+        <Header1>
+          CREATIVE TEAM
+          <br />
+          <span>Olga & Anna</span>
+        </Header1>
+        <p>
+          olgaandania@gmail.com <span>Ania kom: 664 326 780</span> Olga kom: 660
+          912 905
+        </p>
+      </IntroSection>
       <LinkSection>
-        <Span>01</Span>
         <Links to="/o-nas/">O nas</Links>
+        <p>Nasze portfolio:</p>
+        <Links to="/vichy/">VICHY</Links>
+        <Links to="/vichy/">L'OREAL PARIS</Links>
+        <Links to="/vichy/">INNI KLIENCI</Links>
+        <Links to="/vichy/">KONKURSY</Links>
       </LinkSection>
-      <LinkSection>
-        <Span>02</Span>
-        <Links to="/vichy/">Vichy</Links>
-      </LinkSection>
-    </MainContent>
+    </Wrapper>
   </Layout>
 )
-
-export const query = graphql`
-  {
-    file(name: { eq: "main" }) {
-      childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
-          src
-          srcSet
-          sizes
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

@@ -20,7 +20,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Montserrat:500", "Tinos"],
+          families: ["Montserrat:300,500,900", "Playfair Display:italic"],
         },
       },
     },

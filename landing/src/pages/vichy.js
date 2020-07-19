@@ -4,6 +4,11 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 import IntroVichy from "../components/sections/vichy/intro-vichy"
 import Mineral89 from "../components/sections/vichy/mineral89"
+import Mineral89Video from "../components/sections/vichy/mineral89video"
+import LiftActiv from "../components/sections/vichy/liftactive"
+import LiftactivVideo from "../components/sections/vichy/liftactivvideo"
+import Normaderm from "../components/sections/vichy/normaderm"
+import Neovadiol from "../components/sections/vichy/neovadiol"
 
 const CenterWrapper = styled.div`
   height: 100vh;
@@ -30,6 +35,11 @@ const Vichy = ({ data }) => (
     </Layout>
     <IntroVichy />
     <Mineral89 />
+    <Mineral89Video />
+    <LiftActiv />
+    <LiftactivVideo />
+    <Normaderm />
+    <Neovadiol />
   </>
 )
 

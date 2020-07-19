@@ -1,18 +1,18 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Header1 = styled.h1`
-  font-size: 64px;
+  font-size: 76px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 900;
 
   span {
-    font-family: "Tinos";
-    font-size: 100px;
+    font-family: "Playfair Display";
+    font-size: 126px;
     font-weight: 300;
     font-style: italic;
   }
@@ -34,7 +34,8 @@ const IntroSection = styled.div`
 
   p {
     font-size: 15px;
-    font-weight: 300;
+    font-family: "Playfair Display";
+    font-weight: italic;
 
     span {
       border-left: 1px solid ${({ theme }) => theme.color.text.secondary};
@@ -53,14 +54,9 @@ const LinkSection = styled.div`
   width: 30vw;
 `
 
-const Span = styled.span`
-  font-size: 24px;
-  border-right: 1px solid black;
-  padding-right: 10px;
-`
-
 const Links = styled(Link)`
   font-size: 40px;
+  font-weight: 300;
   padding-bottom: 20px;
   color: inherit;
 `
@@ -89,9 +85,9 @@ const IndexPage = () => (
         <Links to="/o-nas/">O nas</Links>
         <p>Nasze portfolio:</p>
         <Links to="/vichy/">VICHY</Links>
-        <Links to="/vichy/">L'OREAL PARIS</Links>
-        <Links to="/vichy/">INNI KLIENCI</Links>
-        <Links to="/vichy/">KONKURSY</Links>
+        <Links to="/loreal/">L'OREAL PARIS</Links>
+        <Links to="/inni-klienci/">INNI KLIENCI</Links>
+        <Links to="/konkursy/">KONKURSY</Links>
       </LinkSection>
     </Wrapper>
   </Layout>

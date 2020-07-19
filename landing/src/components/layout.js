@@ -5,6 +5,7 @@ import theme from "../theme/theme"
 import GlobalStyle from "../theme/GlobalStyle"
 
 const ContentWrapper = styled.div`
+  min-height: 100vh;
   max-height: 100vh;
   width: 100vw;
 `

@@ -8,11 +8,14 @@ import normadermRight from "../../../videos/vichy/11slajd_3_video.mp4"
 import normadermMain from "../../../videos/vichy/Normaderm_13slajd.mp4"
 
 const CenterWrapper = styled.div`
+  min-width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 `
 
 const Image = styled.img`

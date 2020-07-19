@@ -30,6 +30,7 @@ const Instagram = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 50%;
 `
 
 const Vimeo = styled.div`
@@ -49,7 +50,25 @@ const Image = styled.img`
 const AniaSocial = () => {
   const data = useStaticQuery(graphql`
     {
-      file(name: { eq: "behance" }) {
+      behance: file(name: { eq: "behance" }) {
+        childImageSharp {
+          fluid(maxWidth: 200, quality: 90) {
+            src
+            srcSet
+            sizes
+          }
+        }
+      }
+      instagram: file(name: { eq: "instagram" }) {
+        childImageSharp {
+          fluid(maxWidth: 200, quality: 90) {
+            src
+            srcSet
+            sizes
+          }
+        }
+      }
+      vimeo: file(name: { eq: "vimeo" }) {
         childImageSharp {
           fluid(maxWidth: 200, quality: 90) {
             src
@@ -66,9 +85,9 @@ const AniaSocial = () => {
       <Wrapper>
         <Behance>
           <Image
-            src={data.file.childImageSharp.fluid.src}
-            srcSet={data.file.childImageSharp.fluid.srcSet}
-            sizes={data.file.childImageSharp.fluid.sizes}
+            src={data.behance.childImageSharp.fluid.src}
+            srcSet={data.behance.childImageSharp.fluid.srcSet}
+            sizes={data.behance.childImageSharp.fluid.sizes}
           />
           <a
             href="https://www.behance.net/annagudvindesign"
@@ -80,9 +99,9 @@ const AniaSocial = () => {
         </Behance>
         <Instagram>
           <Image
-            src={data.file.childImageSharp.fluid.src}
-            srcSet={data.file.childImageSharp.fluid.srcSet}
-            sizes={data.file.childImageSharp.fluid.sizes}
+            src={data.instagram.childImageSharp.fluid.src}
+            srcSet={data.instagram.childImageSharp.fluid.srcSet}
+            sizes={data.instagram.childImageSharp.fluid.sizes}
           />
           <a
             href="https://www.instagram.com/women_in_design_team/"
@@ -101,9 +120,9 @@ const AniaSocial = () => {
         </Instagram>
         <Vimeo>
           <Image
-            src={data.file.childImageSharp.fluid.src}
-            srcSet={data.file.childImageSharp.fluid.srcSet}
-            sizes={data.file.childImageSharp.fluid.sizes}
+            src={data.vimeo.childImageSharp.fluid.src}
+            srcSet={data.vimeo.childImageSharp.fluid.srcSet}
+            sizes={data.vimeo.childImageSharp.fluid.sizes}
           />
           <a
             href="https://vimeo.com/user37255489"

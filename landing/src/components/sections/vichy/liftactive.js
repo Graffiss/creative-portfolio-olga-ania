@@ -4,11 +4,14 @@ import Layout from "../../layout"
 import styled from "styled-components"
 
 const CenterWrapper = styled.div`
+  min-width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 `
 
 const Image = styled.img`

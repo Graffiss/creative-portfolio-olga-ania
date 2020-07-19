@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `
 
 const Image = styled.img`
-  height: 720px;
+  max-height: 100%;
 `
 
 const Maybelline2 = () => {

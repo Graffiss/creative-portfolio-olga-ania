@@ -29,7 +29,7 @@ const GridColumn = styled.div`
 const Image = styled.img`
   max-width: 33vw;
   max-height: 100vh;
-  background-color: transparent;
+  background-color: white;
 `
 
 const Video = styled.video`

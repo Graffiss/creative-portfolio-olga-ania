@@ -29,13 +29,32 @@ const Header1 = styled.h1`
   padding-bottom: 50px;
 
   span {
-    font-family: "Tinos";
+    font-family: "Playfair Display";
+  }
+
+  @media (max-width: 1450px) {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+    padding-bottom: 10px;
   }
 `
 
 const Paragraph = styled.p`
   color: ${({ theme }) => theme.color.text.primary};
   font-size: 26px;
+  width: 70%;
+
+  @media (max-width: 1450px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
 `
 
 const Ania = () => {
@@ -65,7 +84,7 @@ const Ania = () => {
             konserwatywnych) zawsze kieruję się estetyką. Nie potrafię wysłać do
             klienta czegoś, co nie jest estetyczne. Doskonale czuję kwestię
             kompozycji i fascynuję się typografią. W moich projektach zawsze
-            musi znaleźć się pomysłi przyciągająca strona wizualna. Jednym z
+            musi znaleźć się pomysł i przyciągająca strona wizualna. Jednym z
             takich projektów jest moje konto na Instagramie
             @women_in_design_team, gdzie łączę zdjęcia z typografią i przede
             wszystkim tworzę przestrzeń do promocji kreatywnych kobiet. Ktoś
@@ -74,7 +93,7 @@ const Ania = () => {
             wynagrodzenia. Dla mnie czymś takim są projekty, w których łączę
             pracującą ideę kreatywną z piękną i estetyczną egzekucją. W wolnym
             czasie oddaję się malarstwu i szkicowaniu, a także zgłębiam tematy
-            ayurvedy, duchowych praktyki socjologii.
+            ayurvedy, duchowych praktyk i socjologii.
           </Paragraph>
         </ContentWrapper>
         <Image

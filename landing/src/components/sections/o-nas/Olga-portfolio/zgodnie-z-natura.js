@@ -5,6 +5,7 @@ import Layout from "../../../layout"
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +19,7 @@ const ImageWrapper = styled.div`
 `
 
 const ImageLeft = styled.img`
-  max-height: 720px;
+  max-height: 80%;
 `
 const ImageRight = styled.img`
   max-height: 100vh;

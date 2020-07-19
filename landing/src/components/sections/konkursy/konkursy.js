@@ -31,6 +31,14 @@ const Header1 = styled.h1`
   font-size: 36px;
   margin: 30px 0;
   text-align: left;
+
+  @media (max-width: 1450px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 1150px) {
+    font-size: 20px;
+  }
 `
 
 const Video = styled.video`

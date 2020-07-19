@@ -34,13 +34,31 @@ const Header1 = styled.h1`
   padding-bottom: 50px;
 
   span {
-    font-family: "Tinos";
+    font-family: "Playfair Display";
+  }
+
+  @media (max-width: 1450px) {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+    padding-bottom: 10px;
   }
 `
 
 const Paragraph = styled.p`
   color: ${({ theme }) => theme.color.text.primary};
   font-size: 26px;
+
+  @media (max-width: 1450px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
 `
 
 const Olga = () => {
@@ -66,18 +84,18 @@ const Olga = () => {
           </Header1>
           <Paragraph>
             W życiu jestem pozytywną perfekcjonistką, a zawodowo - copywriterem
-            jestem z powołania! Stoję na straży poprawnej polszczyzny i
-            interpunkcji w nierównych starciach z klientami. Czasami jednak
-            moimi klientami są moi przyjaciele, a ci w 100% mi ufają. Tym samym
-            zostałam ostatnio autorką tytułu książki dla dzieci, a także wzięłam
-            na swoje barki korektę tekstu. Po 10 latach na scenie, prezentacje
-            przed klientem to dla mnie przyjemność. Moje największe zawodowe
-            marzenie? W końcu zrobić własny spot i pojechać na shoot oraz
-            stworzyć kampanię w digitalu, na którą rzeczywiście znajdzie się
-            budżet. Po godzinach prowadzę swojego instagrama
-            @praktycznieomieszkaniu i planuję wrócić do swoich, ukochanych sztuk
-            walki. Można być jednak spokojnym, gdyż w życiu cenię sobie pokojowe
-            rozwiązania i nie dopuszczam się rękoczynów. ;)
+            z powołania! Stoję na straży poprawnej polszczyzny i interpunkcji w
+            nierównych starciach z klientami. Czasami jednak moimi klientami są
+            moi przyjaciele, a ci w 100% mi ufają. Tym samym zostałam ostatnio
+            autorką tytułu książki dla dzieci, a także wzięłam na swoje barki
+            korektę tekstu. Po 10 latach na scenie, prezentacje przed klientem
+            to dla mnie przyjemność. Moje największe zawodowe marzenie? W końcu
+            zrobić własny spot i pojechać na shoot oraz stworzyć kampanię w
+            digitalu, na którą rzeczywiście znajdzie się budżet. Po godzinach
+            prowadzę swojego instagrama @praktycznieomieszkaniu i planuję wrócić
+            do swoich, ukochanych sztuk walki. Można być jednak spokojnym, gdyż
+            w życiu cenię sobie pokojowe rozwiązania i nie dopuszczam się
+            rękoczynów. ;)
           </Paragraph>
         </ContentWrapper>
         <ImageWrapper>

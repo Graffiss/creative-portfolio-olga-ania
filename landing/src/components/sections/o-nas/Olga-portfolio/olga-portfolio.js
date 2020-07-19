@@ -20,7 +20,7 @@ const Header1 = styled.h1`
   margin-bottom: 50px;
 
   span {
-    font-family: "Tinos";
+    font-family: "Playfair Display";
   }
 `
 

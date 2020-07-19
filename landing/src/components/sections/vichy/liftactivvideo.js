@@ -4,10 +4,13 @@ import Layout from "../../layout"
 import liftactivVideo from "../../../videos/vichy/Ampułki_video_9slajd.mp4"
 
 const Wrapper = styled.div`
+  min-width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
 `
 
 const Video = styled.video`

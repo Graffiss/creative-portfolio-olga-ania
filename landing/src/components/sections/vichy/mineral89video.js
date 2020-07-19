@@ -8,11 +8,12 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  background-color: white;
 `
 
 const Video = styled.video`
   flex: 1;
-  max-height: 100vh;
+  height: 80%;
   margin: 0 20px;
 `
 

@@ -15,10 +15,30 @@ const Header1 = styled.h1`
     font-size: 126px;
     font-weight: 300;
     font-style: italic;
+
+    @media (max-width: 1450px) {
+      font-size: 100px;
+    }
+
+    @media (max-width: 1150px) {
+      font-size: 70px;
+    }
+  }
+
+  @media (max-width: 1450px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 1150px) {
+    font-size: 45px;
   }
 `
 const Wrapper = styled.div`
   display: flex;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 
 const IntroSection = styled.div`
@@ -36,6 +56,8 @@ const IntroSection = styled.div`
     font-size: 15px;
     font-family: "Playfair Display";
     font-weight: italic;
+    width: 80%;
+    text-align: center;
 
     span {
       border-left: 1px solid ${({ theme }) => theme.color.text.secondary};
@@ -52,6 +74,20 @@ const LinkSection = styled.div`
   justify-content: center;
   align-items: center;
   width: 30vw;
+
+  p {
+    font-size: 40px;
+    font-weight: 300;
+    padding-bottom: 20px;
+
+    @media (max-width: 1450px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 1150px) {
+      font-size: 24px;
+    }
+  }
 `
 
 const Links = styled(Link)`
@@ -59,11 +95,36 @@ const Links = styled(Link)`
   font-weight: 300;
   padding-bottom: 20px;
   color: inherit;
+
+  @media (max-width: 1450px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 1150px) {
+    font-size: 24px;
+  }
+`
+
+const MobileWrapper = styled.div`
+  @media (min-width: 800px) {
+    display: none;
+  }
+
+  h1 {
+    font-size: 15px;
+    margin: 10%;
+  }
 `
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <MobileWrapper>
+      <h1>
+        Portfolio nie dostępne w wersji mobilnej. Użyj komputera, aby zobaczyć
+        dzieła stworzone przez Olgę i Anię!
+      </h1>
+    </MobileWrapper>
     <Wrapper>
       <IntroSection>
         <p>
@@ -77,15 +138,15 @@ const IndexPage = () => (
           <span>Olga & Anna</span>
         </Header1>
         <p>
-          olgaandania@gmail.com <span>Ania kom: 664 326 780</span> Olga kom: 660
-          912 905
+          olgaandania@gmail.com <span>Anna Solianyk kom: 664 326 780</span> Olga
+          Markiewicz kom: 660 912 905
         </p>
       </IntroSection>
       <LinkSection>
         <Links to="/o-nas/">O nas</Links>
         <p>Nasze portfolio:</p>
         <Links to="/vichy/">VICHY</Links>
-        <Links to="/loreal/">L'OREAL PARIS</Links>
+        <Links to="/loreal/">{"L'Oréal".toUpperCase()} PARIS</Links>
         <Links to="/inni-klienci/">INNI KLIENCI</Links>
         <Links to="/konkursy/">KONKURSY</Links>
       </LinkSection>

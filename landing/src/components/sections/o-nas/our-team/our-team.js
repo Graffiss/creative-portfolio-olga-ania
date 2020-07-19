@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 
 const Header1 = styled.h1`
@@ -22,6 +23,14 @@ const Header1 = styled.h1`
   color: ${({ theme }) => theme.color.text.secondary};
   font-size: 54px;
   transform: rotate(-90deg);
+
+  @media (max-width: 1450px) {
+    font-size: 46px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 38px;
+  }
 `
 
 const Meme = styled.img`
@@ -36,6 +45,14 @@ const Paragraph = styled.p`
   flex: 3;
   color: ${({ theme }) => theme.color.text.secondary};
   font-size: 26px;
+
+  @media (max-width: 1450px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 16px;
+  }
 `
 
 const OurTeam = () => {
@@ -66,7 +83,7 @@ const OurTeam = () => {
           punkt z copy. Przy koncepcjach kreatywnych łatwiej pracuje nam się
           razem niż osobno. Wielokrotnie zaskakujemy same siebie, że zawsze
           potrafimy zrobić coś z niczego. Zrobić kampanię w digitalu, mając do
-          dyspozycji tylko packshot produktu? Challange accepted!
+          dyspozycji tylko packshot produktu? Challenge accepted!
         </Paragraph>
         <Meme
           src={data.file.childImageSharp.fluid.src}

@@ -6,10 +6,13 @@ import neovadiolVideo from "../../../videos/vichy/Neovadiol_16slajd_video.mp4"
 
 const CenterWrapper = styled.div`
   height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 `
 
 const Image = styled.img`

@@ -16,6 +16,7 @@ const CenterWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 `
 
 const Image = styled.img`

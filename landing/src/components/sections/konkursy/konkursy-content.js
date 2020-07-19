@@ -31,6 +31,25 @@ const Paragraph = styled.p`
   font-size: 36px;
   padding: 0 50px;
   text-align: left;
+
+  @media (max-width: 1450px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 1150px) {
+    font-size: 20px;
+  }
+
+  h4 {
+    padding-bottom: 15px;
+    @media (max-width: 1450px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 1150px) {
+      font-size: 24px;
+    }
+  }
 `
 
 const Image = styled.img`
@@ -96,6 +115,7 @@ const KonkursyContent = () => {
           </LeftContent>
           <RightContent>
             <Paragraph>
+              <h4>YC Eurobest - Adidas</h4>
               BYŁYŚMY NA SHORTLIŚCIE! Serio! :) Kampania miała się jednak
               wydarzyć zimową porą i chyba jury konkursu ostatecznie bało się
               odmrozić kostki potencjalnych uczestników. Wystarczy jednak

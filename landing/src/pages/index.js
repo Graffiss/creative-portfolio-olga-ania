@@ -116,6 +116,26 @@ const MobileWrapper = styled.div`
   }
 `
 
+const Footer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  span {
+    font-size: 15px;
+    font-family: "Playfair Display";
+    font-weight: italic;
+    text-align: center;
+    padding: 0 10px;
+
+    &.middle {
+      border-left: 1px solid ${({ theme }) => theme.color.text.secondary};
+      border-right: 1px solid ${({ theme }) => theme.color.text.secondary};
+      padding: 0 10px;
+    }
+  }
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -137,10 +157,11 @@ const IndexPage = () => (
           <br />
           <span>Olga & Anna</span>
         </Header1>
-        <p>
-          olgaandania@gmail.com <span>Anna Solianyk kom: 664 326 780</span> Olga
-          Markiewicz kom: 660 912 905
-        </p>
+        <Footer>
+          <span>olgaandania@gmail.com</span>
+          <span className="middle">Anna Solianyk kom: 664 326 780</span>
+          <span>Olga Markiewicz kom: 660 912 905</span>
+        </Footer>
       </IntroSection>
       <LinkSection>
         <Links to="/o-nas/">O nas</Links>
